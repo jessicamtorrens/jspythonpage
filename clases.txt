@@ -1,0 +1,8 @@
+CLASES:
+
+**El tipo de letra se le puede cambiar a todo el documento en el body de ser necesario***
+
+.centrar: sirve para centrar un bloque en el medio de otro bloque. Esta clase se aplica al  bloque interno que se desea centrar.
+
+
+.btn : clase de los botones- el color es heredado del elemeto padre del boton

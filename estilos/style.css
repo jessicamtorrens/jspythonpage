@@ -1,0 +1,281 @@
+/*Limpiar estilos básicos del navegador*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    
+}
+
+/*Estilos header*/
+
+.parallax{
+    width: 100%;
+    height: 85vh;
+    color: white;
+    background: linear-gradient(to bottom,
+    rgba(15, 15, 15, 0.6),
+    rgba(19, 20, 20, 0.6)
+    ), url("../img/background-header.jpg"); /*coloca la img de fondo*/
+    background-repeat: no-repeat; 
+    background-attachment: fixed;/*El fondo queda fijo y se genera el efecto*/
+    background-size:cover ;/*para que la imagen cubra todo el fondo y se ajuste*/
+}
+
+/*menu de navegación*/
+nav{
+  width: 100%;
+  position: fixed;/*Para fijar el menu en la parte superior*/
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+  height: 70px; 
+}
+
+.nav1{/*menu transparente*/
+    background: transparent;
+    color: white;
+    
+    
+}
+.nav2{/*menu no transparente---aparece a cierta altura de la pantalla*/
+    background: white;
+    color: black;
+    
+   
+    
+}
+
+
+nav .enlaces a{/*estilos de enlace del menu*/
+    display: inline-block;
+    padding: 3% 0 0.5% 0;
+    height: 50%;
+    margin-left: 20px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    border-bottom: 5px solid transparent;
+}
+
+nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
+    border-bottom: 3px solid ;
+}
+
+/*texto del header*/
+.centrar{ /*Clase que centra un bloque en otro bloque*/
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+  
+}
+
+.centrar>h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.btn{/*Estilos de botones*/
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 7px;
+    padding: 10px;  
+    border: 2px solid;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
+
+/*clase para fuentes de iconos*/
+.icon{
+    font-size: 30px;
+    display: inline-block;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 3px;
+    display: none;
+    margin-top: 3% ;
+    margin-left: 3%;
+    
+}
+
+/* Split */
+
+:root {
+	--container-bg-color:#333;
+	--left-bg-color: rgba(8, 22, 69, 0.7);
+	--left-button-hover-color:rgba(161, 11, 11, 0.3);
+	--right-bg-color: rgba(0, 111, 155, 0.8);
+	--right-button-hover-color:rgba(92, 92, 92, 0.3);
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+h1 {
+	font-size: 4rem;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+
+p {
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.button {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 2.5rem;
+	padding-top: 1.3rem;
+	width: 15rem;
+	text-align: center;
+	color: #fff;
+	border: #fff solid 0.2rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	transform: translateX(-50%);
+	transition: 0.3s;
+}
+
+.second {
+	top: 65%;
+}
+
+.split.left .button:hover {
+	background-color: var(--right-bg-color);
+	border-color: var(--right-bg-color);
+}
+
+.split.right .button:hover {
+	background-color: var(--left-bg-color);
+	border-color: var(--left-bg-color);
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: var(--container-bg-color);
+}
+
+.split {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow:hidden;
+}
+
+.split.left {
+	left: 0;
+	background: url(python.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.split.left:before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--left-bg-color);
+}
+
+.split.right {
+	right: 0;
+	background: url(javascript.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.split.right:before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--right-bg-color);
+}
+
+
+@media(max-width: 800px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	.button {
+		width: 12rem;
+	}
+}
+
+
+@media(min-height: 700px) {
+	.button {
+		top: 70%;
+	}
+}
+
+
+
+/*Puntos de ruptura*/
+@media screen and ( max-width:650px){
+    .centrar>h1{
+        font-size: 50px;
+    }
+
+    .enlaces{/*a un tamaño menor de 650px cambia la forma del menú*/
+      background: linear-gradient(to bottom,
+      rgba(15, 15, 15, 0.9),
+      rgba(19, 20, 20, 0.9)
+      );
+      text-align: center;
+      position: fixed;
+      top: 70px;
+      
+      transform: translateX(-100%);/*El emnú va a estar escondido hasta que se le de click al icono*/
+      
+    }
+
+    .enlaces2{/*Esta clase se agrega para que aparezca el menu*/
+        transition: 1s all ease-in;
+        transform: translateX(0%);
+    }
+
+    nav .enlaces a{
+        width: 60%;
+        padding: 7% 0;
+        
+    }
+
+    .icon{
+        display: inline-block;
+    }
+}
