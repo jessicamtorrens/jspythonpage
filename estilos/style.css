@@ -1,3 +1,11 @@
+:root {
+	--container-bg-color:#333;
+	--left-bg-color: rgba(8, 22, 69, 0.7);
+	--left-button-hover-color:rgba(161, 11, 11, 0.3);
+	--right-bg-color: rgba(0, 111, 155, 0.8);
+	--right-button-hover-color:rgba(92, 92, 92, 0.3);
+}
+
 /*Limpiar estilos básicos del navegador*/
 *{
     margin: 0;
@@ -6,20 +14,18 @@
 }
 
 body{
-    width: 100vw;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	width: 100%;
+	
 }
 
 /*Estilos header*/
 
 .parallax{
     width: 100%;
-    height: 85vh;
+    height: 70vh;
     color: white;
-    background: linear-gradient(to bottom,
-    rgba(15, 15, 15, 0.6),
-    rgba(19, 20, 20, 0.6)
-    ), url("../img/background-header.jpg"); /*coloca la img de fondo*/
+    background: url("../img/background-header.jpg"); /*coloca la img de fondo*/
     background-repeat: no-repeat; 
     background-attachment: fixed;/*El fondo queda fijo y se genera el efecto*/
     background-size:cover ;/*para que la imagen cubra todo el fondo y se ajuste*/
@@ -73,12 +79,14 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     align-items: center;
     text-align: center;
     
+    
   
 }
 
 .centrar>h1{
     font-size: 60px;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    
 }
 
 .btn{/*Estilos de botones*/
@@ -111,10 +119,143 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     
 }
 
+/*learn*/
+.learn{
+    display: block;
+    width: 100%;
+    height: 30vh;
+    text-align:center ;
+}
+
+
+.title{
+    font-size: 3rem; 
+    margin: 2% 0;
+    color: rgba(8, 22, 69, 1);
+}
+
+.text{
+    display: inline-block;
+    width: 80%;
+    margin-top:2% ;
+}
+
 /* Split */
 
 
+h2 {
+	font-size: 4rem;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+
+.description {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translateX(-50%);
+    text-align: center;
+    
+}
+
+.button {
+    display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 15rem;
+	text-align: center;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	transform: translateX(-50%);
+	transition: 0.3s;
+}
+
+.second {
+	top: 65%;
+}
+
+.split.left .button:hover {
+	background-color: var(--right-bg-color);
+	border-color: var(--right-bg-color);
+}
+
+.split.right .button:hover {
+	background-color: var(--left-bg-color);
+	border-color: var(--left-bg-color);
+}
+
+
+
+.split {
+	position: absolute;
+	width: 50%;
+	height: 55%;
+    overflow:hidden;
+    
+}
+
+.split.left {
+	left: 0;
+	background: url(../img/python.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.split.left:before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--left-bg-color);
+}
+
+.split.right {
+	right: 0;
+	background: url(../img/javascript.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.split.right:before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--right-bg-color);
+}
+
+
+
+
 /*Puntos de ruptura*/
+
+@media(max-width: 800px) {
+	h2 {
+		font-size: 3rem;
+    }
+    
+    .button{
+        top: 65%;
+    }
+    .second{
+        top:80%
+    }
+
+}
+
+
+
 @media screen and ( max-width:650px){
     .centrar>h1{
         font-size: 50px;
