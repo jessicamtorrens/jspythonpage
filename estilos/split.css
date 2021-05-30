@@ -87,7 +87,7 @@ p {
 
 .split.left {
 	left: 0;
-	background: url(python.jpg) center center no-repeat;
+	background: url(img/python.jpg) center center no-repeat;
 	background-size: cover;
 }
 
@@ -101,7 +101,7 @@ p {
 
 .split.right {
 	right: 0;
-	background: url(javascript.jpg) center center no-repeat;
+	background: url(img/javascript.jpg) center center no-repeat;
 	background-size: cover;
 }
 
