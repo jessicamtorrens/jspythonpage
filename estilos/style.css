@@ -127,6 +127,7 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     text-align:center ;
 }
 
+
 .title{
     font-size: 3rem; 
     margin: 2% 0;
@@ -252,6 +253,8 @@ h2 {
     }
 
 }
+
+
 
 @media screen and ( max-width:650px){
     .centrar>h1{
