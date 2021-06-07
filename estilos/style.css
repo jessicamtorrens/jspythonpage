@@ -14,9 +14,9 @@
 }
 
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
 	width: 100%;
-	
+    font-family: "Open Sans", sans-serif;
 }
 
 /*Estilos header*/
@@ -31,28 +31,25 @@ body{
     background-size:cover ;/*para que la imagen cubra todo el fondo y se ajuste*/
 }
 
-/*menu de navegación*/
+/* ----- MENÚ DE NAVEGACIÓN ----- */
 nav{
   width: 100%;
   position: fixed;/*Para fijar el menu en la parte superior*/
   box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
   height: 70px; 
   transition: 0.5s all ease-in-out ;
+  z-index: 100;
 }
 
 .nav1{/*menu transparente*/
     background: transparent;
-    color: white;
-    
-    
+    color: white;   
 }
+
 .nav2{/*menu no transparente---aparece a cierta altura de la pantalla*/
     background: white;
     color: black;
-      
-    
 }
-
 
 nav .enlaces a{/*estilos de enlace del menu*/
     display: inline-block;
@@ -69,7 +66,7 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     border-bottom: 3px solid ;
 }
 
-/*texto del header*/
+/* ----- TEXTO DEL HEADER ----- */
 .centrar{ /*Clase que centra un bloque en otro bloque*/
     width: 100%;
     height: 100%;
@@ -78,15 +75,14 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
-    
-  
 }
 
+.titulo1{
+    width: 80%;
+}
 .centrar>h1{
     font-size: 60px;
     margin: 20px 0;
-    
 }
 
 .btn{/*Estilos de botones*/
@@ -97,9 +93,8 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     margin: 7px;
     padding: 10px;  
     border: 2px solid;
-    border-radius: 30px;
+    border-radius: 10px;
     cursor: pointer;
-
 }
 
 .btn:active{
@@ -116,21 +111,20 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     display: none;
     margin-top: 3% ;
     margin-left: 3%;
-    
 }
 
-/*learn*/
+/* ----- LEARN ----- */
 .learn{
     display: block;
     width: 100%;
-    text-align:center ;
+    text-align:center;
+    padding: 20px 120px;
 }
 
-
 .title{
-    font-size: 3rem; 
+    font-size: 34px; 
     margin: 2% 0;
-    color: rgba(8, 22, 69, 1);
+    color: #001361;
 }
 
 .text{
@@ -139,9 +133,7 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     margin-bottom: 2%;
 }
 
-/* Split */
-
-
+/* ----- SPLIT ----- */
 h2 {
 	font-size: 4rem;
 	color: #fff;
@@ -162,8 +154,7 @@ h2 {
 	left: 50%;
 	top: 40%;
 	transform: translateX(-50%);
-    text-align: center;
-    
+    text-align: center;   
 }
 
 .button {
@@ -196,14 +187,11 @@ h2 {
 	border-color: var(--left-bg-color);
 }
 
-
-
 .split {
 	position: absolute;
 	width: 50%;
 	height: 55%;
     overflow:hidden;
-    
 }
 
 .split.left {
@@ -234,10 +222,116 @@ h2 {
 	background: var(--right-bg-color);
 }
 
+.container {
+    height: 300 px;
+}
 
+/* ----- FOOTER ----- */
+footer .contacto {
+    padding: 60px 200px; 
+}
+footer .contacto .titulo {
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 60px;
+    color: #001361;
+    text-align: center; 
+}
 
+footer .contacto .formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
 
-/*Puntos de ruptura*/
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea {
+    border: 2px solid #cecece;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: #a4a4a4; 
+    font-family: "Open Sans", sans-serif;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"] {
+    width: 49%;
+    margin-bottom: 15px; 
+}
+
+footer .contacto .formulario textarea {
+    width: 100%;
+    height: 100px;
+    min-width: 100%;
+    margin-bottom: 15px;
+    min-height: 150px;
+    max-height: 300px; 
+}
+
+footer .contacto .formulario .boton {
+    margin: auto;
+    background: #3895ea;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 40px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+footer .contacto .formulario .boton:hover {
+    background: #001361; 
+}
+
+footer .redes-sociales {
+    background: #1e2b38;
+    padding: 60px 0; 
+}
+
+footer .redes-sociales .contenedor {
+    display: flex;
+    justify-content: center; 
+}
+    
+footer .redes-sociales .contenedor a {
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    font-size: 30px;
+    padding: 15px 0;
+    display: block;
+    margin: 0 20px;
+    border-radius: 3px; 
+}
+
+footer .redes-sociales .contenedor .twitter:hover {
+    background: #55acee; }
+footer .redes-sociales .contenedor .facebook:hover {
+    background: #3b5998; }
+footer .redes-sociales .contenedor .youtube:hover {
+    background: #cd201f; }
+footer .redes-sociales .contenedor .github:hover {
+    background: #666666; }
+footer .redes-sociales .contenedor .instagram:hover {
+    background: #a231c1; }
+
+.icon-image{
+    height: 30px;
+}
+
+#youtube{
+    margin-top: 10px;
+}
+
+.icon-pos{
+    display:flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- PUNTOS DE RUPTURA ----- */
 
 @media(max-width: 800px) {
 	h2 {
@@ -256,8 +350,6 @@ h2 {
     }
 
 }
-
-
 
 @media screen and ( max-width:650px){
     .centrar>h1{
@@ -292,3 +384,4 @@ h2 {
         display: inline-block;
     }
 }
+
