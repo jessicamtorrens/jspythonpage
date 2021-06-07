@@ -225,6 +225,24 @@ p {
 	background: var(--right-bg-color);
 }
 
+/* Download Section */
+.title {
+	text-transform: uppercase;
+}
+
+.download-container {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.image-container {
+	width: 150px;
+}
+
+.image {
+	width: 100%;
+}
+
 
 @media(max-width: 800px) {
 	h1 {
