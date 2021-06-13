@@ -101,6 +101,10 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     transform: scale(0.9);
 }
 
+.uppercase {
+   text-transform:uppercase;
+}
+
 /*clase para fuentes de iconos*/
 .icon{
     font-size: 30px;
