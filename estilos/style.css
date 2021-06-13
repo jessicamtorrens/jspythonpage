@@ -244,6 +244,10 @@ h2 {
 	width: 100%;
 }
 
+.button a {
+	text-decoration:none;
+}
+
 /* ----- FOOTER ----- */
 footer .contacto {
     padding: 60px 200px; 
