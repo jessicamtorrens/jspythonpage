@@ -329,15 +329,15 @@ footer .redes-sociales .contenedor a {
 }
 
 footer .redes-sociales .contenedor .twitter:hover {
-    background: #55acee; }
+    color: #55acee; }
 footer .redes-sociales .contenedor .facebook:hover {
-    background: #3b5998; }
+    color: #3b5998; }
 footer .redes-sociales .contenedor .youtube:hover {
-    background: #cd201f; }
+    color: #cd201f; }
 footer .redes-sociales .contenedor .github:hover {
-    background: #666666; }
+    color: #666666; }
 footer .redes-sociales .contenedor .instagram:hover {
-    background: #a231c1; }
+    color: #a231c1; }
 
 .icon-image{
     height: 30px;
