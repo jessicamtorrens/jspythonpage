@@ -230,6 +230,20 @@ h2 {
     height: 300 px;
 }
 
+/* Download section */
+.download-container {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.image-container {
+	width: 150px;
+}
+
+.image {
+	width: 100%;
+}
+
 /* ----- FOOTER ----- */
 footer .contacto {
     padding: 60px 200px; 
