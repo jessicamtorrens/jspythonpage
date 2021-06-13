@@ -25,6 +25,10 @@ body{
     background-size:cover ;/*para que la imagen cubra todo el fondo y se ajuste*/
 }
 
+.uppercase {
+	text-transform:uppercase;
+}
+
 /*menu de navegación*/
 nav{
   width: 100%;
