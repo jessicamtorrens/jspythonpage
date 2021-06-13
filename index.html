@@ -16,9 +16,9 @@
             
                 <div class="enlaces" id="enlaces">
                     <a href="#" class="btn-header uppercase">Inicio</a>
-                    <a href="#" class="btn-header uppercase">Cursos</a>
-                    <a href="#" class="btn-header uppercase">Descargas</a>
-                    <a href="#" class="btn-header uppercase">Conacto</a>
+                    <a href="#cursos" class="btn-header uppercase">Cursos</a>
+                    <a href="#descargas" class="btn-header uppercase">Descargas</a>
+                    <a href="#contacto" class="btn-header uppercase">Contacto</a>
                 </div>
 
                 <div class="icon icon-menu " id="menu"></div>
@@ -38,7 +38,7 @@
             <h3 class="title uppercase">Aprende a Programar Hoy</h3>
             <p class="text">Python y Javascript son dos de los mejores lenguajes de programación que puedes aprender para impulsar tu carrera. Comienza conociendo su historia, el manejo de variables, bucles, funciones y mucho más.</p>
         </div>
-        <div class="container" style="height: 350px">
+        <div class="container" id="cursos" style="height: 350px">
             <div class="split left">
                 <h2>Python</h2>
                 <p class="description">Una poderosa herramienta de programación</p>
@@ -54,10 +54,35 @@
 	    </div>
 
     </main>
+	
+   <section id="descargas">
+		<h3 class="title">Descargas</h3>
+		<div class="download-container">
+			<div class="download-section">
+				<div class="image-container">
+					<img class="image" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg">
+				</div>	
+				
+				<button class="btn">Descargar Aquí</button>
+			</div>
+			<div class="download-section">
+				<div class="image-container">
+					<img class="image" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
+				</div>
+				<button class="btn">Descargar Aquí</button>
+			</div>
+			<div class="download-section">
+				<div class="image-container">
+				<img class="image" src="https://icon-library.com/images/node-js-icon/node-js-icon-8.jpg">
+				</div>
+				<button class="btn">Descargar Aquí</button>
+			</div>
+		</div>
+	</section>
 
     <footer>
         <div class="contenedor">
-            <section class="contacto">
+            <section class="contacto" id="contacto">
                 <h1 class="titulo uppercase">Contacto</h1>
                 <form class="formulario" action="">
                     <input type="text" placeholder="Nombre" name="nombre" required>
