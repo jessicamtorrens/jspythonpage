@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?cz486j');
-  src:  url('fonts/icomoon.eot?cz486j#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?cz486j') format('truetype'),
-    url('fonts/icomoon.woff?cz486j') format('woff'),
-    url('fonts/icomoon.svg?cz486j#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?xquheu');
+  src:  url('fonts/icomoon.eot?xquheu#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xquheu') format('truetype'),
+    url('fonts/icomoon.woff?xquheu') format('woff'),
+    url('fonts/icomoon.svg?xquheu#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,27 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-python:before {
+  content: "\e902";
+}
+.icon-javascript:before {
+  content: "\e900";
+}
+.icon-home:before {
+  content: "\e901";
+}
+.icon-pencil:before {
+  content: "\e905";
+}
 .icon-menu:before {
   content: "\e9bd";
-}
-.icon-facebook2:before {
-  content: "\ea91";
-}
-.icon-instagram:before {
-  content: "\ea92";
-}
-.icon-whatsapp:before {
-  content: "\ea93";
-}
-.icon-telegram:before {
-  content: "\ea95";
-}
-.icon-twitter:before {
-  content: "\ea96";
-}
-.icon-youtube:before {
-  content: "\ea9d";
-}
-.icon-linkedin:before {
-  content: "\eac9";
 }
