@@ -240,6 +240,7 @@ h2 {
 .image-container {
 	width: 150px;
 	margin: 0 auto;
+	height: 200px;
 	
 }
 
@@ -250,6 +251,7 @@ h2 {
 .download-section .btn a {
 	text-decoration:none;
 	color:#001361;
+	border-color: #001361;
 	margin-top: 1rem;
 }
 
