@@ -239,6 +239,8 @@ h2 {
 
 .image-container {
 	width: 150px;
+	margin: 0 auto;
+	
 }
 
 .image {
