@@ -304,6 +304,8 @@ footer .contacto .formulario .boton {
     padding: 15px 40px;
     font-size: 16px;
     border-radius: 10px;
+	text-transform:uppercase;
+	font-weight:600;
 }
 
 footer .contacto .formulario .boton:hover {
