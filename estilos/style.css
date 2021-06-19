@@ -232,6 +232,11 @@ h2 {
 }
 
 /* Download section */
+.descargas {
+	background: #efeeee;
+	padding: 2rem;
+}
+
 .download-container {
 	display: flex;
 	justify-content: space-evenly;
