@@ -122,7 +122,7 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     display: block;
     width: 100%;
     text-align:center;
-    padding: 20px 120px;
+    padding: 5% 10%;
 }
 
 .title{
