@@ -122,7 +122,7 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     display: block;
     width: 100%;
     text-align:center;
-    padding: 20px 120px;
+    padding: 5% 10%;
 }
 
 .title{
@@ -232,20 +232,27 @@ h2 {
 }
 
 /* Download section */
+
 #descargas {
 	background: #efeeee;
 	padding: 2rem;
 }
 
+
 .download-container {
 	display: flex;
 	justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40%;
 }
 
 .image-container {
 	width: 150px;
 	margin: 0 auto;
+
 	height: 200px;
+
 	
 }
 
@@ -384,6 +391,14 @@ footer .redes-sociales .contenedor .instagram:hover {
     .title{
         font-size: 2rem;
     }
+    #descargas{
+        padding-top: 15%;
+    }
+    
+    footer .contacto {
+        padding: 60px 17%; 
+    }
+
 
 }
 
@@ -418,6 +433,10 @@ footer .redes-sociales .contenedor .instagram:hover {
 
     .icon{
         display: inline-block;
+    }
+
+    #descargas{
+        padding-top: 20%;
     }
 }
 

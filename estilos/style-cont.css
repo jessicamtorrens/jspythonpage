@@ -27,16 +27,19 @@
   text-align: center;
   color: #001361;
   }
+
+  main{
+    display:flex;
+    height:90%;
+  }
   .izquierdo{
   padding-top: 3px ;
   border-style:double;
   border-color: rgb(1, 24, 14);
-  position: absolute;
   width: 25%;
-  height: 90%;
-  top: 10%;
-  margin-right: 2px;
-  margin-left: 0px;
+  height: 100%;
+  /*margin-right: 2px;
+  margin-left: 0px;*/
   /*background-color: rgb(187, 224, 192) ;*/
   background-color: #c0c0c0;
   align-content: center;
@@ -46,12 +49,11 @@
   .derecho{
   border-style:double;
   border-color: rgb(1, 24, 14);
-  top: 10%;
-  position:absolute;
+  
   /*margin-left: 2px;*/
   width: 75%;
-  height: 90%;
-  left: 25%;
+  height: 100%;
+  
   justify-content: space-evenly;
   overflow-y: auto;
   /*background-color: rgb(192, 228, 192);*/
