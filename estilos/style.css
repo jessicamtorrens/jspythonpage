@@ -232,10 +232,7 @@ h2 {
 }
 
 /* Download section */
-#descargas{
-    background-color: rgb(219, 219, 219);
-    padding:5% 0 ;
-}
+
 .download-container {
 	display: flex;
 	justify-content: space-evenly;
