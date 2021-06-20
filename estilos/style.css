@@ -388,6 +388,11 @@ footer .redes-sociales .contenedor .instagram:hover {
     #descargas{
         padding-top: 15%;
     }
+    
+    footer .contacto {
+        padding: 60px 17%; 
+    }
+
 
 }
 
