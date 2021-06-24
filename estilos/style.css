@@ -404,7 +404,7 @@ footer .redes-sociales .contenedor .instagram:hover {
 
 @media screen and ( max-width:650px){
     .centrar>h1{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .enlaces{/*a un tamaño menor de 650px cambia la forma del menú*/
@@ -421,14 +421,21 @@ footer .redes-sociales .contenedor .instagram:hover {
     }
 
     .enlaces2{/*Esta clase se agrega para que aparezca el menu*/
-        transition: 1s all ease-in;
+        transition: 1s all ease-in-out;
         transform: translateX(0%);
+        width: 100%;
+        
     }
 
     nav .enlaces a{
-        width: 60%;
+        width: 100%;
         padding: 7% 0;
+        color:white;
+        margin: 0;
         
+    }
+    nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
+        border-bottom: none;
     }
 
     .icon{
