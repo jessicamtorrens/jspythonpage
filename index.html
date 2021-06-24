@@ -13,16 +13,16 @@
 <body>
     <header class="parallax">
         <nav id="nav" class="nav1">
-            
-                <div class="enlaces" id="enlaces">
-                    <a href="#" class="btn-header uppercase">Inicio</a>
-                    <a href="#cursos" class="btn-header uppercase">Cursos</a>
-                    <a href="#descargas" class="btn-header uppercase">Descargas</a>
-                    <a href="#contacto" class="btn-header uppercase">Contacto</a>
-                </div>
 
-                <div class="icon icon-menu " id="menu"></div>
-            
+            <div class="enlaces" id="enlaces">
+                <a href="#" class="btn-header uppercase">Inicio</a>
+                <a href="#cursos" class="btn-header uppercase">Cursos</a>
+                <a href="#descargas" class="btn-header uppercase">Descargas</a>
+                <a href="#contacto" class="btn-header uppercase">Contacto</a>
+            </div>
+
+            <div class="icon icon-menu " id="menu"></div>
+
         </nav>
 
         <div class="centrar">
@@ -36,7 +36,9 @@
     <main>
         <div class="learn">
             <h3 class="title uppercase">Aprende a Programar Hoy</h3>
-            <p class="text">Python y Javascript son dos de los mejores lenguajes de programación que puedes aprender para impulsar tu carrera. Comienza conociendo su historia, el manejo de variables, bucles, funciones y mucho más.</p>
+            <p class="text">Python y Javascript son dos de los mejores lenguajes de programación que puedes aprender
+                para impulsar tu carrera. Comienza conociendo su historia, el manejo de variables, bucles, funciones y
+                mucho más.</p>
         </div>
         <div class="container" id="cursos" style="height: 350px">
             <div class="split left">
@@ -51,34 +53,38 @@
                 <a href="javascript/principalJs.html" class="button btn">Aprende JavaScript</a>
                 <a href="#" class="second button btn">Evalúa tus conocimientos</a>
             </div>
-	    </div>
+        </div>
 
     </main>
-	
-   <section id="descargas">
-		<h3 class="title uppercase">Descargas</h3>
-		<div class="download-container">
-			<div class="download-section">
-				<div class="image-container">
-					<img class="image" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg">
-				</div>	
-				
-				<button class="btn uppercase"><a href="https://code.visualstudio.com/download" target="_blank">Descargar Aquí</a></button>
-			</div>
-			<div class="download-section">
-				<div class="image-container">
-					<img class="image" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
-				</div>
-				<button class="btn uppercase"><a href="https://www.python.org/downloads/" target="_blank">Descargar Aquí</a></button>
-			</div>
-			<div class="download-section">
-				<div class="image-container">
-				<img class="image" src="https://icon-library.com/images/node-js-icon/node-js-icon-8.jpg">
-				</div>
-				<button class="btn uppercase"><a href="https://nodejs.org/en/download/" target="_blank">Descargar Aquí</a></button>
-			</div>
-		</div>
-	</section>
+
+    <section id="descargas">
+        <h3 class="title uppercase">Descargas</h3>
+        <div class="download-container">
+            <div class="download-section">
+                <div class="image-container">
+                    <img class="image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg">
+                </div>
+
+                <button class="btn uppercase"><a href="https://code.visualstudio.com/download" target="_blank">Descargar
+                        Aquí</a></button>
+            </div>
+            <div class="download-section">
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg">
+                </div>
+                <button class="btn uppercase"><a href="https://www.python.org/downloads/" target="_blank">Descargar
+                        Aquí</a></button>
+            </div>
+            <div class="download-section">
+                <div class="image-container">
+                    <img class="image" src="https://icon-library.com/images/node-js-icon/node-js-icon-8.jpg">
+                </div>
+                <button class="btn uppercase"><a href="https://nodejs.org/en/download/" target="_blank">Descargar
+                        Aquí</a></button>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="contenedor">
@@ -92,20 +98,41 @@
                 </form>
             </section>
         </div>
-            
+
         <section class="redes-sociales">
             <div class="contenedor">
                 <a class="twitter icon-pos" href=""><img src="img/twitter.png" alt="Twitter" class="icon-image"></a>
                 <a class="facebook icon-pos" href=""><img src="img/facebook.png" alt="Facebook" class="icon-image"></a>
-                <a class="youtube icon-pos" href=""><img src="img/youtube.png" alt="Youtube" id="youtube" class="icon-image"></a>
+                <a class="youtube icon-pos" href=""><img src="img/youtube.png" alt="Youtube" id="youtube"
+                        class="icon-image"></a>
                 <a class="github icon-pos" href=""><img src="img/github.png" alt="GitHub" class="icon-image"></a>
-                <a class="instagram icon-pos" href=""><img src="img/instagram.png" alt="Instagram" class="icon-image"></a>
+                <a class="instagram icon-pos" href=""><img src="img/instagram.png" alt="Instagram"
+                        class="icon-image"></a>
             </div>
         </section>
     </footer>
-	
-	<script src="js/main.js"></script>
-<script src="js/main.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+        //MENÚ HAMBURGUESA
+        const menu = document.getElementById("menu");
+        const enlaces = document.getElementById("enlaces");
+        let abierto = false;
+
+        menu.onclick = () => {
+            enlaces.classList.toggle("enlaces2");
+            abierto = !abierto;
+        }
+
+        window.addEventListener('click', e => {
+            if (enlaces.classList.contains('enlaces2')
+                && e.target != menu && e.target != menu) {
+
+                enlaces.classList.toggle("enlaces2")
+            }
+        })
+    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

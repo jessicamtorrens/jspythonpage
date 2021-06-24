@@ -49,14 +49,16 @@
   }
   .derecho{
   border-style:double;
-  border-color: rgb(1, 24, 14);
-  align-content: center;
+  border-color: rgb(1, 24, 14); align-content: center;
   
   /*margin-left: 2px;*/
   width: 75%;
   height: 100%;
   
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   overflow-y: auto;
   /*background-color: rgb(192, 228, 192);*/
   }
@@ -116,9 +118,9 @@
     margin-left:5px ;
 
   }
-  .lista li a:hover {
+  /*.lista li a:hover {
   color: rgb(207, 20, 20);
-  }
+  }*/
 
   .test1{
     text-align: center;
@@ -137,13 +139,19 @@
 
   }
 
+  
   .imagen{
    cursor: pointer;
     width: 50%;
-    height: 50%;
-    margin: 50px 250px 200px 200px;
-     }
+          
+   }
 
+   .texto{
+     width: 80%;
+     margin: 5% 0 ;
+   }
+
+ 
   /*MENÚ LATERAL*/
   
 .temas{
@@ -162,7 +170,7 @@
 .principal{
   text-align: center;
   background-color: rgb(8, 22, 69);
-  padding: 1%;
+  padding: 5% 0;
   border: 1px solid rgb(168, 167, 167);
   cursor: pointer;
   

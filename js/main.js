@@ -13,24 +13,9 @@ window.addEventListener("scroll",()=>{//evento scroll
     
 })
 
-//MENÚ HAMBURGUESA
-const menu=document.getElementById("menu");
-const enlaces= document.getElementById("enlaces");
-let abierto= false;
-
-menu.onclick= ()=>{
-enlaces.classList.toggle("enlaces2");
-abierto=!abierto;
-}
 
 
-window.addEventListener('click', e =>{
-    if(enlaces.classList.contains('enlaces2') 
-        && e.target != menu && e.target != menu){
-        
-        enlaces.classList.toggle("enlaces2")
-    }
-})
+
 
 //MENU ACORDEON DEL CONTENIDO
 const principal= document.getElementsByClassName("principal");
