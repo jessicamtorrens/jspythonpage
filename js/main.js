@@ -13,6 +13,10 @@ window.addEventListener("scroll",()=>{//evento scroll
     
 })
 
+
+
+
+
 //MENU ACORDEON DEL CONTENIDO
 const principal= document.getElementsByClassName("principal");
 let activa=document.getElementById("caja0")
