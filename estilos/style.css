@@ -53,13 +53,14 @@ nav{
 
 nav .enlaces a{/*estilos de enlace del menu*/
     display: inline-block;
-    padding: 3% 0 0.5% 0;
+    padding: 2.5% 1% 0.5% 0;
     height: 50%;
     margin-left: 20px;
     text-decoration: none;
     color: inherit;
     font-weight: 600;
     border-bottom: 5px solid transparent;
+    
 }
 
 nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
@@ -81,7 +82,8 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     width: 80%;
 }
 .centrar>h1{
-    font-size: 60px;
+    /*--font-size: 60px;--*/
+    font-size: 5vw;
     margin: 20px 0;
 }
 
@@ -89,7 +91,8 @@ nav .enlaces a:hover{ /*línea inferior al fasar el cursor sobre el enlace*/
     text-decoration: none;
     color: inherit;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 16px;
+    font-weight:600;
     margin: 7px;
     padding: 10px;  
     border: 2px solid;
@@ -404,10 +407,8 @@ footer .redes-sociales .contenedor .instagram:hover {
 
 }
 
-@media screen and ( max-width:650px){
-    .centrar>h1{
-        font-size: 40px;
-    }
+@media screen and ( max-width:800px){
+
 
     .enlaces{/*a un tamaño menor de 650px cambia la forma del menú*/
       background: linear-gradient(to bottom,

@@ -139,10 +139,12 @@
 
   }
 
-  
+  .title{
+    font-weight: bolder;
+    font-size: 5vw;
+  }
   .imagen{
-   cursor: pointer;
-    width: 50%;
+     width: 80%;
           
    }
 
@@ -191,9 +193,9 @@
 .secundario{
   list-style: none;
   display: block;
-margin-bottom: 1%;  
-margin-left: 2px;
-  padding: 0%;
+  padding-bottom: 1%;  
+  padding-left: 2px;
+ 
 }
 
 .secundario:first-child{
@@ -201,7 +203,8 @@ margin-left: 2px;
 }
 
 
-.secundario:hover{
-  background-color:rgb(241, 235, 235); ;
+.secundario:hover,
+.actual{
+  background-color:rgb(221, 217, 217); ;
 }
 
