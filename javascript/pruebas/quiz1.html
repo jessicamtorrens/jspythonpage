@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/21584bba56.js" crossorigin="anonymous"></script>
+  <title>Plantilla Quiz</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: calc(0.5rem + 1vh);
+    }
+
+    html {
+      height: 100%;
+    }
+
+    /**********************************/
+    body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    body>* {
+      width: 100%;
+    }
+
+    header,
+    footer,
+    .puntaje>*,
+    .cont-opc>*,
+    button,
+    .preguntas,
+    .indice li {
+      padding: calc(0.1rem + 1vh);
+    }
+
+    .preguntas h4,
+    .cont-msg,
+    .acumulado {
+      padding: calc(0.5rem + 1vh);
+    }
+
+    .cont-btn {
+      padding-top: calc(0.3rem + 1vh);
+    }
+
+    .cont-opc div,
+    h4,
+    .preguntas,
+    .cont-msg {
+      margin: calc(0.1rem + 1vh) 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: calc(1rem + 1vh);
+    }
+
+    header,
+    .cont-left,
+    .cont-btn {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    header,
+    .preguntas h4 {
+      background: black;
+      color: white;
+    }
+
+    .indice {
+      background: rgba(51, 51, 51, 0.6);
+    }
+
+    footer,
+    h4 {
+      text-align: center;
+    }
+
+    button,
+    h4 {
+      border-radius: 10px;
+    }
+
+    .puntaje,
+    main {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    main {
+      margin-top: 10vh;
+      position: relative;
+    }
+
+    header {
+      position: fixed;
+      border-bottom: solid 1px gray;
+      box-shadow: 0px 2px 1px gray;
+      height: 10vh;
+      align-items: center;
+      z-index: 100;
+    }
+
+    #menu-bar {
+      display: none;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .cont-left {
+      flex: 1;
+      flex-direction: column;
+      padding: calc(0.1rem + 1vh);
+    }
+
+    .cont-left>* {
+      align-self: center;
+      width: 80%;
+    }
+
+    .preguntas {
+      align-self: center;
+      width: 80%;
+      box-shadow: 2px 5px 15px gray;
+    }
+
+    .puntaje>* {
+      border-radius: 50%;
+      color: black;
+    }
+
+
+    .cont-opc div,
+    .acumulado {
+      border: solid 1px gray;
+      box-shadow: 5px 5px silver;
+    }
+
+    .cont-opc b {
+      background: #6C3483;
+      color: white;
+      padding: 0 calc(0.1rem + 1vh);
+      border-radius: 50%
+    }
+
+    .resp,
+    .cont-msg,
+    .acumulado {
+      display: flex;
+    }
+
+    .resp b {
+      margin-right: 1%;
+      align-self: center;
+    }
+
+    button {
+      border: none;
+    }
+
+    .save {
+      background: transparent;
+    }
+
+    .prev {
+      background: transparent;
+      display: none;
+    }
+
+    .next {
+      background: transparent;
+    }
+
+    .endQuiz {
+      display: none;
+      background: #3498DB;
+    }
+
+    .indice {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+    }
+
+    .indice ul {
+      height: 90%;
+      list-style: none;
+      overflow-y: auto;
+    }
+
+    .indice li {
+      border-bottom: solid 1px white;
+    }
+
+    .indice li:hover {
+      background: silver;
+      color: black;
+    }
+
+    img {
+      width: calc(1rem + 1vh);
+      ;
+      height: calc(1rem + 1vh);
+    }
+
+    i {
+      font-size: calc(1.5rem + 1vh);
+      margin-right: 1%;
+    }
+
+    .cont-msg p,
+    .acumulado p {
+      align-self: center;
+    }
+
+    .acumulado {
+      justify-content: center;
+    }
+
+    .simple,
+    .multiple,
+    .prev,
+    .respuestas {
+      display: none;
+    }
+
+    @media (min-width: 800px) {
+      .indice {
+        display: block;
+        width: 20%;
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <i class="fas fa-home"></i>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png" class="img2"
+      alt="py">
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar">
+      <i class="fas fa-bars"></i></label>
+  </header>
+  <main class="content">
+    <section class="cont-left">
+      <!-----------------Cont- Pregunta-------------->
+      <div class="preguntas">
+        <div class="puntaje">
+          <strong>1 /10</strong>
+          <strong class='valueQ'>10pts</strong>
+        </div>
+        <h4>Pregunta</h4>
+        <div class="cont-opc multiple">
+          <div>
+            <b>A</b>
+            <input type="checkbox" id="opc" name="opc" value="one">
+            <label for="opc"> Lorem ipsum</label>
+          </div>
+          <div>
+            <b>B</b>
+            <input type="checkbox" id="opc" name="opc" value="one">
+            <label for="opc"> Lorem ipsum</label>
+          </div>
+          <div>
+            <b>C</b>
+            <input type="checkbox" id="opc" name="opc" value="one">
+            <label for="opc"> Lorem ipsum</label>
+          </div>
+          <div>
+            <b>D</b>
+            <input type="checkbox" id="opc" name="opc" value="one">
+            <label for="opc"> Lorem ipsum</label>
+          </div>
+        </div>
+        <div class="cont-opc simple">
+          <div>
+            <b>A</b>
+            <input type="radio" id="opcR" name="opcR">
+            <label for="opcR"> Lorem ipsum</label>
+          </div>
+          <div>
+            <b>B</b>
+            <input type="radio" id="opcR" name="opcR">
+            <label for="opcR"> Lorem ipsum</label>
+          </div>
+          <div>
+            <b>C</b>
+            <input type="radio" id="opcR" name="opcR">
+            <label for="opcR"> Lorem ipsum</label>
+          </div>
+          <div>
+            <b>D</b>
+            <input type="radio" id="opcR" name="opcR">
+            <label for="opcR"> Lorem ipsum</label>
+          </div>
+        </div>
+        <div class="cont-btn">
+          <button class="save"><i class="fas fa-save"></i></button>
+        </div>
+        <p class="cont-msg" align="center"></p>
+        </p>
+      </div>
+      <div class="cont-btn">
+        <button class="prev"><i class="fas fa-arrow-circle-left"></i></button>
+        <button class="next"><i class="fas fa-arrow-circle-right"></i></button>
+      </div>
+      <div class="cont-btn">
+        <button class="endQuiz">Enviar Examen<i class="fas fa-file-import"></i> </button>
+      </div>
+
+    </section>
+    <aside class="indice">
+      <h4>Indice</h4>
+      <ul>
+      </ul>
+    </aside>
+  </main>
+  <script>
+    const parentQ = document.querySelector(".cont-left");
+    const cont_msg = document.querySelector(".cont-msg");
+    const cont_pre = document.querySelector(".preguntas");
+    const cont_Respuestas = document.querySelector(".respuestas");
+    const menu = document.querySelector("#menu-bar");
+    const indice = document.querySelector(".indice");
+    const lista = document.querySelector(".indice ul");
+    const pregunt = document.querySelector(".preguntas h4");
+    const cont_preg = document.querySelector(".puntaje strong");
+    const valueQ = document.querySelector(".valueQ");
+    const opcMult = document.querySelectorAll("#opc");
+    const opcSimple = document.querySelectorAll("#opcR");
+
+    const simples = document.querySelector(".simple");
+    const multiples = document.querySelector(".multiple");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    const endQuiz = document.querySelector(".endQuiz");
+    const save = document.querySelector(".save");
+
+    let elem_ind, id_pre = 0, opc = [], correctaSimple = 0, correctaMultiple = [0, 1, 2], tipo = '', contResp = 0, mensaje = '';
+
+    // crear obj de preguntas 
+    let objetoPreguentas = [
+      { pregunta: '¿Dentro de qué elemento HTML ponemos JavaScript?', opciones: ['<script>', '<js>', '<javascrit>', '<html>'], multiple: false, seleccion: [], ranOp: [] },
+      { pregunta: '¿Cómo escribir una instrucción IF para ejecutar algún código si "i" NO es igual a 5?', opciones: ["if(i!==5)", "if i<>5", "if(i<>5)", "if(i=!5)"], multiple: false, seleccion: [], ranOp: [] },
+      { pregunta: '¿Cual de los siguientes son metodos de array?', opciones: ["slice()", "splice()", "indexOf()", "substring()"], multiple: true, seleccion: [], ranOp: [] }
+    ]
+    const copyOb = [...objetoPreguentas]
+    const objectQuez = ranInd(copyOb);
+
+    /***********Mostrar u ocultar Menu***********/
+    const showHide = () => {
+      if (menu.checked) {
+        indice.style.display = "block";
+        a = false;
+      } else {
+        indice.style.display = "none";
+      }
+    }
+    menu.addEventListener("click", showHide);
+    /**********Seleccion pregunta del indice***********/
+    const getIdPregunta = (e) => {
+      if (window.innerWidth < 800) { indice.style.display = "none"; } id_pre = e.target.getAttribute('data-id'); loadPregunta();
+    }
+    /***********Cargar listado de preguntas al indice***********/
+    for (let index = 0; index < objectQuez.length; index++) {
+      const { pregunta, opciones, multiple, seleccion } = objectQuez[index]; elem_ind = document.createElement("li");
+      elem_ind.textContent = `${index + 1} -. ${pregunta}`; elem_ind.setAttribute("data-id", index);
+      elem_ind.addEventListener("click", getIdPregunta);
+      lista.appendChild(elem_ind);
+    }
+    const removeEventIndice = () => {
+      const li = document.querySelectorAll("li");
+      for (let index = 0; index < li.length; index++) {
+        li[index].removeEventListener("click", getIdPregunta);
+      }
+    }
+
+    const nextQuestion = () => {
+      if (id_pre == 0 || id_pre < objectQuez.length - 1) {
+        next.style.display = "block";
+      } else {
+        next.style.display = "none";
+      }
+      if (id_pre > 0) {
+        prev.style.display = "block";
+      } else {
+        prev.style.display = "none";
+      }
+    }
+    next.addEventListener("click", () => {
+      id_pre++;
+      loadPregunta();
+    });
+    prev.addEventListener("click", () => {
+      id_pre--;
+      loadPregunta();
+    });
+
+    /*********Cargar Pregunta y opciones******/
+    const loadPregunta = () => {
+      cont_msg.style.display = "none";
+      mensaje = "";
+      nextQuestion();
+      // search pregunta seleccionada del indice
+      for (let i = 0; i < objectQuez.length; i++) {
+        let arrOp = []
+        if (i === parseInt(id_pre)) {
+          const { pregunta, opciones, multiple,
+            seleccion } = objectQuez[i];
+          let copy = [...opciones];
+          let opcRan = ranInd(copy)
+          objectQuez[id_pre].ranOp = [...opcRan]
+
+          if (multiple) {
+            opc = opcMult; tipo = 'multiple';
+            multiples.style.display = 'block';
+            simples.style.display = 'none';
+          } else {
+            opc = opcSimple; tipo = 'simple';
+            multiples.style.display = 'none';
+            simples.style.display = 'block';
+          }
+          //load ubicacion pregunta y puntaje
+          cont_preg.textContent = `${parseInt(id_pre) + 1} / ${objectQuez.length}` // show pregunta
+          valueQ.textContent = `${parseFloat(20 / objectQuez.length).toFixed(2)} Pts `
+          pregunt.textContent = `${parseInt(id_pre) + 1} ${pregunta}`;
+          // show opciones
+          for (let index = 0; index <
+            opc.length; index++) {
+            opc[index].setAttribute("data-id", index);
+            opc[index].parentElement.style.background = 'white'; opc[index].nextElementSibling.textContent = opcRan[index];
+          } // Validar si hay respuestas seleccionadas 
+          for (let ind = 0; ind < seleccion.length; ind++) {
+            for (let index = 0; index < opc.length; index++) {
+              if (opc[index].getAttribute("data-id") === seleccion[ind]) {
+                opc[index].parentElement.style.background = '#2ECC71 ';
+              }
+            }
+          }
+          addEventOpc(opc)
+          break;
+        }
+      }
+    }
+
+    // ****************Carga evento en opcones*******************
+    const addEventOpc = (opc) => {
+      for (let index = 0; index < opc.length; index++) {
+        opc[index].addEventListener("click", seleccionOpc);
+      }
+    }
+    //// valida si existe seleccion previa 
+    const seleccionOpc = () => {
+      if (objectQuez[id_pre].seleccion.length > 0) {
+        objectQuez[id_pre].seleccion.length = 0;
+      }
+      for (let index = 0; index < opc.length; index++) {
+        if (opc[index].checked == true) {
+          opc[index].parentElement.style.background = '#3498DB ';
+        } else {
+          opc[index].parentElement.style.background = 'white';
+        }
+      }
+    }
+    //****************Preguntas ************ 
+    const guardar = () => {
+      const hideMsg = () => {
+        cont_msg.style.display = "none";
+      }
+      let cont = 0;
+      for (let index = 0; index < opc.length; index++) {
+        if (opc[index].checked == true) {
+          objectQuez[id_pre].seleccion.push(opc[index].getAttribute('data-id'));
+          cont++;
+          mensaje = "Guardado";
+        }
+      }
+      if (cont == 0) {
+        mensaje = "Debe seleccionar una opcion"
+      } else {
+        id_pre++;
+        contResp++;
+        if (id_pre < objectQuez.length) {
+          setTimeout(loadPregunta, 500);
+        } else {
+          if (contResp < objectQuez.length - 1) {
+            id_pre = objectQuez.length - 1;
+          }
+        }
+      }
+      if (contResp == objectQuez.length) {
+        endQuiz.style.display = "block";
+      }
+
+      if (mensaje == "Guardado") {
+        cont_msg.style.background = "#2ECC71 ";
+        setTimeout(hideMsg, 500);
+      } else {
+        setTimeout(hideMsg, 500);
+        cont_msg.style.background = "#FAD7A0";
+      }
+      cont_msg.style.display = "block";
+      cont_msg.textContent = mensaje;
+    }
+    save.addEventListener("click", guardar);
+
+    /****************Validar Examen*****************/
+    endQuiz.addEventListener("click", () => {
+      removeEventIndice();
+      next.style.display = "none";
+      prev.style.display = "none";
+      let puntos = parseFloat(20 / objectQuez.length).toFixed(2);
+      let acumulado = 0;
+      cont_pre.style.display = "none";
+      endQuiz.style.display = "none";
+
+      let titulo = document.createElement("h1");
+      titulo.textContent = "Resultados"
+      parentQ.appendChild(titulo);
+
+      for (let k = 0; k < objectQuez.length; k++) {
+
+        let divMsg = document.createElement("div");
+        const { pregunta, ranOp, multiple, seleccion } = objectQuez[k];
+        //contenedor respuestas
+        let divPre = document.createElement("div");
+        divPre.className = "preguntas";
+        parentQ.appendChild(divPre);
+
+        // marcador pregunta puntaje
+        let divPuntaje = document.createElement("div");
+        divPuntaje.className = "puntaje";
+        divPre.appendChild(divPuntaje);
+
+        //marcador puntaje
+        let nroPts = document.createElement("strong");
+        nroPts.textContent = `${puntos} Pts `;
+        divPuntaje.appendChild(nroPts);
+
+        //Titulo pregunta
+        let tituloPregunta = document.createElement("h4");
+        tituloPregunta.textContent = `${k + 1}) ${pregunta}`;
+        divPre.appendChild(tituloPregunta);
+
+        // contenedor opciones seleccionadas
+        let divOpc = document.createElement("div");
+        divOpc.className = "cont-opc";
+        divPre.appendChild(divOpc);
+
+        for (let i = 0; i < ranOp.length; i++) {
+          let id_resp = ["A", "B", "C", "D"], idx = 0;
+          // div cont reespuesta
+          let divRep = document.createElement("div");
+          divRep.className = "resp";
+          divOpc.appendChild(divRep);
+
+          //Id entificador respuesta
+          let opRes = document.createElement("b");
+          opRes.textContent = id_resp[i];
+          divRep.appendChild(opRes);
+
+          //respuesta seleccionada
+          let respuesta = document.createElement("p");
+          respuesta.textContent = ranOp[i];
+          divRep.appendChild(respuesta);
+          // recorrer selecciones y mostrar
+          for (let j = 0; j < seleccion.length; j++) {
+            // validar selecciones
+            if (!multiple) {
+              if (i === parseInt(seleccion[j])) {
+                if (ranOp[parseInt(seleccion[j])] === objectQuez[k].opciones[0]) {
+                  respuesta.parentElement.style.background = "#2ECC71 ";
+                  mensaje = `Correcta`;
+                  divMsg.style.background = "#2ECC71 ";
+                } else {
+                  respuesta.parentElement.style.background = "#E74C3C";
+                  mensaje = `Fallido repase la leccion ${pregunta} `;
+                  divMsg.style.background = "#E74C3C";
+                  nroPts.textContent = `0 Pts`;
+                }
+              }
+            } else {
+              if (i === parseInt(seleccion[j])) {
+                // texto objectQuez[k].opciones[0]
+                for (let m = 0; m < correctaMultiple.length; m++) {
+                  correctaMultiple[m] = objectQuez[k].opciones[m]
+                }
+                if (correctaMultiple.includes(ranOp[parseInt(seleccion[j])])) {
+                  respuesta.parentElement.style.background = "#2ECC71 ";
+                  if (seleccion.length == correctaMultiple.length) {
+                    mensaje = `Correcta`;
+                    divMsg.style.background = "#2ECC71 ";
+                  } else {
+                    mensaje = `Incompleta`;
+                    divMsg.style.background = "#FAD7A0";
+                    nroPts.textContent = `0 Pts`;
+                  }
+                } else {
+                  respuesta.parentElement.style.background = "#E74C3C";
+                  mensaje = `Fallido repase la leccion ${pregunta} `;
+                  divMsg.style.background = "#E74C3C";
+                  nroPts.textContent = `0 Pts`;
+                }
+              }
+            }
+          }
+        }
+
+        // Mensaje respuesta contenedor
+        divMsg.className = "cont-msg";
+        divPre.appendChild(divMsg);
+
+        //Mensaje pregunta
+        let msg = document.createElement("p");
+        msg.textContent = mensaje;
+        divMsg.appendChild(msg);
+
+        // element i
+        let icono = document.createElement('i');
+        divMsg.insertBefore(icono, msg);
+
+
+        // puntuacion pregunta
+        if (mensaje == 'Correcta') {
+          acumulado += parseFloat(puntos);
+          icono.className = "far fa-check-circle";
+        } else {
+          icono.className = "far fa-times-circle";
+        }
+      }
+      // contenedor mensaje
+      let resCont = document.createElement("div");
+      resCont.className = "acumulado";
+      parentQ.appendChild(resCont);
+      // element i
+      let iconoRes = document.createElement('i');
+      resCont.appendChild(iconoRes);
+
+      //Puntaje final
+      if (acumulado < 10) {
+        mensaje = "Reprobado";
+        iconoRes.className = "far fa-tired";
+      } else {
+        mensaje = "Aprobado";
+        iconoRes.className = "far fa-smile-wink";
+      }
+      // mensaje final
+      let resultado = document.createElement("p");
+      resultado.textContent = `${mensaje}, Puntaje Final : ${parseInt(acumulado)} `;
+      resCont.appendChild(resultado);
+    });
+
+    // llamado inicial
+    loadPregunta();
+    // barajea arreglo
+    function ranInd(array) {
+      var m = array.length,
+        t, i;
+      while (m) {
+        i = Math.floor(Math.random() * m--);
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+      }
+      return array;
+    }
+  </script>
+</body>
+
+</html>
