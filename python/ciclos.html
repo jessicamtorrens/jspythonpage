@@ -133,20 +133,42 @@
       </div>
       <div class ="derecho">
         
-        <h1 class="title">Glosario Básico</h1>
-        <p class="texto">Python: Python es un lenguaje de programación de código abierto creado por Guido van Rossum a finales de los años 80, y que se presentó en 1991. Se incorporó por primera vez con ArcGIS 9.0 y desde entonces se ha convertido en la opción preferida para los usuarios que crean flujos de trabajo de geoprocesamiento.</p>
-        <p class="texto">ArcPy: ArcPy (comúnmente denominado paquete del sitio de ArcPy) proporciona acceso a Python para todas las herramientas de geoprocesamiento, incluidas las extensiones, así como una gran variedad de funciones y clases útiles para el trabajo y los interrogatorios de datos SIG. Mediante el uso de Python y ArcPy, puede desarrollar un sinfín de programas útiles que operen en datos geográficos.</p>
-        <p class="texto">Módulos de ArcPy: Un módulo es un archivo de Python que generalmente incluye funciones y clases. ArcPy es compatible con una serie de módulos, incluido un módulo de acceso de datos (arcpy.da), un módulo de representación cartográfica (arcpy.mapping), un módulo de ArcGIS Spatial Analyst extension (arcpy.sa) y un módulo de ArcGIS Network Analyst extension (arcpy.na).</p>
-        <p class="texto">Clases de ArcPy: Una clase es similar a un plano arquitectónico. El plano ofrece el marco sobre cómo crear algo. Las clases se pueden utilizar para crear objetos, que comúnmente se denominan instancias. Las clases de ArcPy, como las clases SpatialReference y Extent, generalmente se utilizan como accesos rápidos de teclado para completar los parámetros de la herramienta de geoprocesamiento que de lo contrario tendrían un equivalente de cadena de texto más complicado.</p>
-        <p class="texto">Funciones de ArcPy: Una función es una funcionalidad definida que realiza una tarea específica y se puede incorporar a un programa más amplio.
-        En ArcPy, todas las herramientas de geoprocesamiento se proporcionan como funciones, pero no todas las funciones son herramientas de geoprocesamiento. Además de herramientas, ArcPy proporciona diversas funciones para brindar mayor soporte a los flujos de trabajo de geoprocesamiento de Python. Las funciones (que con frecuencia se denominan métodos) se pueden utilizar para enumerar ciertos datasets, recuperar las propiedades de un dataset, validar el nombre de una tabla antes de agregarlo a una geodatabase o realizar muchas otras tareas de secuencia de comandos útiles.</p>
-        <p class="texto">Secuencia de comandos de Python independiente: Una secuencia de comandos de Python independiente es un archivo .py que se puede ejecutar desde el símbolo de sistema del sistema operativo, un entorno de desarrollo integrado (IDE) de Python o al hacer doble clic en el archivo .py en Windows Explorer.</p>
-        <p class="texto">Herramienta de secuencia de comandos de Python:
-            Una herramienta de secuencia de comandos de Python es una secuencia de comandos de Python que se ha agregado a una caja de herramientas de geoprocesamiento. Una vez que se agrega como una herramienta de secuencia de comandos, funciona de modo similar a cualquier otra herramienta de geoprocesamiento; se puede abrir y ejecutar en el cuadro de diálogo de la herramienta, que se utiliza en la ventana de Python y ModelBuilder, y se puede solicitar desde otras secuencias de comandos y herramientas de secuencia de comandos.</p>
-        <p class="texto">Ventana de Python: La ventana Python es un lugar rápido y conveniente para utilizar Python desde ArcGIS a fin de ejecutar interactivamente las herramientas de geoprocesamiento y las funcionalidades, y aprovechar otros módulos y bibliotecas de Python. Esta ventana también ofrece una puerta de enlace para que aprenda sobre Python.
-        </p>
-        <p class="texto">Add-in de Python: Un add-in de Python es una personalización escrita en Python, como un conjunto de herramientas en una tabla de herramientas que se integra en una aplicación de ArcGIS for Desktop que proporciona funciones complementarias para la realización de tareas personalizadas. Para aclarar el desarrollo de los add-ins de Python, debe descargar y utilizar el Asistente de add-ins de Python para declarar el tipo de personalización. El asistente generará todos los archivos requeridos necesarios para que funcione el add-in. Haga clic aquí para descargar el Asistente de add-ins de Python desde el Centro de recursos de geoprocesamiento.</p>
-        <p class="texto">Caja de herramientas Python: Las cajas de herramientas Python son cajas de herramientas de geoprocesamiento creadas completamente en Python. Una caja de herramientas de Python y las herramientas que contiene tienen el mismo aspecto, se comportan igual y trabajan de la misma forma que las </p>
+         <h1 class="title">Ciclos</h1>
+         <p class="texto">Un bucle o ciclo, en programación, es una secuencia de instrucciones de código que se ejecuta repetidas veces, hasta que la condición asignada a dicho bucle deja de cumplirse. Los tres bucles más utilizados en programación son el bucle while, el bucle for y el bucle do-while.</p>
+         <h2>Ciclo For</h2>
+         <p class="texto">Los ciclos for permiten ejecutar una o varias instrucciones de forma iterativa, una vez por cada elemento en la colección.</p>
+          <p>Las colecciones pueden ser de varios tipos, el for puede recibir una colección predefinida o directamente de la salida de una función.</p>
+        <p>El siguiente fragmento de código es utilizado para iterar a través de un rango del 1 al 10.</p>
+
+          <pre>
+            <code>
+              >>> for contador in range(1,10):
+            .  ... print contador,
+            ...
+            1 2 3 4 5 6 7 8 9
+            >>>
+
+
+            </code>
+          </pre>
+
+         </p>
+         <h2>Ciclo While</h2>
+         <p class="texto">El ciclo while permite ejecutar un bloque de instrucciones mientras se cumpla la condición dada. Primero comprueba que en efecto se cumple la condición dada y entonces, ejecuta el segmento de código correspondiente hasta que la condición no se cumpla.</p>
+      <pre>
+        <code>
+          >>> x = 15
+          >>> if x > 10:
+          ... print('x es mayor que 10')
+      ... 
+      x es mayor que 10
+      </code>
+      </pre>
+      <p class="texto">En el ejemplo empezamos asignando a la variable x el valor 15. A continuación evaluamos si cumple la condición de que la variable x es mayor a 10. Como se da el caso, la condición se evalúa como verdadera. Es por ello que el programa ejecuta la sentencia print.</p>
+</p>
+
+
+
         
       </div>
   
